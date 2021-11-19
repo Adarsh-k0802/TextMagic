@@ -8,8 +8,7 @@ import About from './components/About';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 
@@ -45,7 +44,7 @@ function App() {
         }
         else{
           setMode('dark');
-          document.body.style.backgroundColor='#2B1B17';
+          document.body.style.backgroundColor='#1C2833  ';
           showAlert("DarkMode Enabled","success");
           // document.title=('TextUtils - DarkMode');
         }
@@ -61,7 +60,7 @@ function App() {
 <div className="container my-3" >
 <Switch>
           <Route exact path="/about">
-            <About />
+            <About mode={mode} />
           </Route>
           
           <Route exact path="/">
